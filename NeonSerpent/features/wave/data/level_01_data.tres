@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://features/wave/data/level_data.gd" id="1_ld"]
+[ext_resource type="Resource" path="res://features/wave/data/wave_1_1.tres" id="2_w1"]
+
+[resource]
+script = ExtResource("1_ld")
+level_name = "初次启动"
+hp_multiplier = 1.0
+waves = Array[Resource]([ExtResource("2_w1")])
+relic_count = 0
+starting_snake_length = 3
+starting_turret = "machinegun"

@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://ui/menus/victory_screen.gd" id="1_v"]
+
+[node name="Victory" type="Control"]
+process_mode = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+script = ExtResource("1_v")
+
+[node name="Bg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0.06, 0.15, 0.8)
+mouse_filter = 0
+
+[node name="VBox" type="VBoxContainer" parent="."]
+process_mode = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -60.0
+offset_right = 150.0
+offset_bottom = 60.0
+mouse_filter = 0
+
+[node name="Title" type="Label" parent="VBox"]
+process_mode = 1
+layout_mode = 2
+text = "通关！"
+horizontal_alignment = 1
+mouse_filter = 0
+
+[node name="RestartBtn" type="Button" parent="VBox"]
+process_mode = 1
+layout_mode = 2
+text = "再来一局"
+mouse_filter = 1

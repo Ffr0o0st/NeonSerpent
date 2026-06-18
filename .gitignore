@@ -1,0 +1,17 @@
+# Godot
+.godot/
+*.import
+*.translation
+*.uid
+
+# Export
+export/
+*.zip
+
+# Claude
+.claude/
+
+# Misc
+Thumbs.db
+*.tmp
+*.log

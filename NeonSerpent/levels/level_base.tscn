@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://b6a5wym5p6ob0"]
+
+[ext_resource type="Script" uid="uid://ba10kmwksfq5n" path="res://levels/level_base.gd" id="1_level_base"]
+[ext_resource type="Script" uid="uid://1rxewovxb4y4" path="res://levels/grid_overlay.gd" id="2_grid_overlay"]
+[ext_resource type="PackedScene" path="res://features/snake/snake_head.tscn" id="3_snake_head_scene"]
+[ext_resource type="Resource" path="res://common/resources/grid_config.tres" id="4_grid_config"]
+[ext_resource type="Script" uid="uid://dn2ckfs0deqns" path="res://features/snake/snake_manager.gd" id="5_snake_manager"]
+[ext_resource type="PackedScene" path="res://features/core/core.tscn" id="6_core_scene"]
+[ext_resource type="Script" uid="uid://d4kay20wbxxlx" path="res://features/enemy/enemy_manager.gd" id="7_enemy_manager"]
+[ext_resource type="Script" uid="uid://dhac82wqlydai" path="res://features/wave/wave_manager.gd" id="8_wave_manager"]
+[ext_resource type="Script" uid="uid://cpuvr5t57db4p" path="res://features/food/food_spawner.gd" id="9_food_spawner"]
+
+[node name="LevelBase" type="Node2D" unique_id=1181755675]
+script = ExtResource("1_level_base")
+grid_config = ExtResource("4_grid_config")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1829590676]
+
+[node name="Background" type="ColorRect" parent="." unique_id=1280174311]
+offset_right = 768.0
+offset_bottom = 768.0
+color = Color(0.039, 0.039, 0.078, 1)
+
+[node name="GridOverlay" type="Node2D" parent="." unique_id=1392560431]
+script = ExtResource("2_grid_overlay")
+
+[node name="GameWorld" type="Node2D" parent="." unique_id=9487020]
+
+[node name="SnakeHead" parent="GameWorld" unique_id=710825889 instance=ExtResource("3_snake_head_scene")]
+
+[node name="SnakeBody" type="Node2D" parent="GameWorld" unique_id=1589932130]
+
+[node name="Core" parent="GameWorld" unique_id=1738892882 instance=ExtResource("6_core_scene")]
+
+[node name="Enemies" type="Node2D" parent="GameWorld" unique_id=1564996744]
+
+[node name="FoodItems" type="Node2D" parent="GameWorld" unique_id=347483110]
+
+[node name="Projectiles" type="Node2D" parent="GameWorld" unique_id=1105754436]
+
+[node name="VFX" type="Node2D" parent="GameWorld" unique_id=1863906474]
+
+[node name="SnakeManager" type="Node" parent="GameWorld" unique_id=1333312270]
+script = ExtResource("5_snake_manager")
+snake_head = NodePath("../SnakeHead")
+
+[node name="EnemyManager" type="Node" parent="GameWorld" unique_id=1193388501]
+script = ExtResource("7_enemy_manager")
+
+[node name="WaveManager" type="Node" parent="GameWorld" unique_id=2090164047]
+script = ExtResource("8_wave_manager")
+
+[node name="FoodSpawner" type="Node" parent="GameWorld" unique_id=1799390254]
+script = ExtResource("9_food_spawner")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1456240099]
+
+[node name="GameHUD" type="Control" parent="CanvasLayer" unique_id=1576062872]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = -222.0
+offset_right = 14.0
+offset_bottom = -222.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

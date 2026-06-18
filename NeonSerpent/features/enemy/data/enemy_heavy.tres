@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://features/enemy/data/enemy_data.gd" id="1_ed"]
+
+[resource]
+script = ExtResource("1_ed")
+display_name = "Heavy"
+base_hp = 400.0
+move_speed = 0.4
+core_damage = 2.0
+food_drop_count = 3
+xp_reward = 15
+color = Color(0.8, 0.0, 0.0, 1)
+shape = "square"
+visual_size = 48.0
+ai_type = "straight_to_core"
+core_weight = 1.0
+has_shield = true
+shield_duration = 2.0
+shield_cooldown = 6.0
+explode_on_death = false
+has_aura = false

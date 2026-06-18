@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://ui/hud/game_hud.gd" id="1_hud"]
+
+[node name="GameHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("1_hud")
+
+[node name="TopPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 0.0
+anchor_right = 1.0
+offset_bottom = 40.0
+
+[node name="HBoxTop" type="HBoxContainer" parent="TopPanel"]
+layout_mode = 2
+
+[node name="CoreHealthBar" type="TextureProgressBar" parent="TopPanel/HBoxTop"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 200.0
+value = 200.0
+tint_progress = Color(1, 0.84, 0, 1)
+
+[node name="WaveLabel" type="Label" parent="TopPanel/HBoxTop"]
+layout_mode = 2
+text = "第1关 · 第1波"
+
+[node name="KillLabel" type="Label" parent="TopPanel/HBoxTop"]
+layout_mode = 2
+text = "击杀: 0"
+
+[node name="BottomPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_left = 0.0
+anchor_right = 1.0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -36.0
+
+[node name="HBoxBottom" type="HBoxContainer" parent="BottomPanel"]
+layout_mode = 2
+
+[node name="SnakeLength" type="Label" parent="BottomPanel/HBoxBottom"]
+layout_mode = 2
+text = "蛇长: 3"
+
+[node name="FoodCount" type="Label" parent="BottomPanel/HBoxBottom"]
+layout_mode = 2
+text = "食物: 0/3"
+
+[node name="FoodProgress" type="HBoxContainer" parent="BottomPanel/HBoxBottom"]
+layout_mode = 2

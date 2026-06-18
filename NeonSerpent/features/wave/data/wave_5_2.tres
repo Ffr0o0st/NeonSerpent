@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="WaveData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://features/wave/data/wave_data.gd" id="1_wd"]
+
+[resource]
+script = ExtResource("1_wd")
+wave_name = "第5关-波2"
+duration_estimate = 75.0
+enemy_scene_paths = Array[String](["res://features/enemy/types/enemy_mirror.tscn", "res://features/enemy/types/enemy_runner.tscn"])
+enemy_counts = Array[int]([1, 25])
+spawn_intervals = Array[float]([0.0, 2.5])
+start_delays = Array[float]([0.0, 0.0])

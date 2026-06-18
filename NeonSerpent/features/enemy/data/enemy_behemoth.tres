@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://features/enemy/data/enemy_data.gd" id="1_ed"]
+
+[resource]
+script = ExtResource("1_ed")
+display_name = "Behemoth"
+base_hp = 2000.0
+move_speed = 0.3
+core_damage = 5.0
+food_drop_count = 10
+xp_reward = 30
+color = Color(1.0, 0.0, 0.0, 1)
+shape = "square"
+visual_size = 64.0
+ai_type = "mixed"
+core_weight = 0.7
+has_shield = false
+explode_on_death = false
+has_aura = true
+aura_buff_percent = 0.15
+aura_cooldown = 8.0

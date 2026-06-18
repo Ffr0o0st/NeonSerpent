@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://features/wave/data/level_data.gd" id="1_ld"]
+[ext_resource type="Resource" path="res://features/wave/data/wave_2_1.tres" id="2_w1"]
+[ext_resource type="Resource" path="res://features/wave/data/wave_2_2.tres" id="3_w2"]
+
+[resource]
+script = ExtResource("1_ld")
+level_name = "钢铁洪流"
+hp_multiplier = 1.25
+waves = Array[Resource]([ExtResource("2_w1"), ExtResource("3_w2")])
+relic_count = 1
+starting_snake_length = 3
+starting_turret = "machinegun"

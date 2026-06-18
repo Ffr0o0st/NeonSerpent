@@ -1,0 +1,22 @@
+# Godot
+.godot/
+*.import
+*.translation
+
+# UID files (Godot editor metadata)
+*.uid
+
+# Export
+export/
+export_presets.cfg
+
+# System
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Claude
+.claude/
+CLAUDE.md
+.mcp.json

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://features/enemy/data/enemy_data.gd" id="1_ed"]
+
+[resource]
+script = ExtResource("1_ed")
+display_name = "Crawler"
+base_hp = 100.0
+move_speed = 1.0
+core_damage = 1.0
+food_drop_count = 1
+xp_reward = 5
+color = Color(1.0, 0.4, 0.0, 1)
+shape = "diamond"
+visual_size = 32.0
+ai_type = "straight_to_core"
+core_weight = 1.0
+has_shield = false
+explode_on_death = false
+has_aura = false
