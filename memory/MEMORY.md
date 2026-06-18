@@ -1,0 +1,5 @@
+- [中文语言偏好](chinese-language.md) — 始终使用中文回答、提问和注释
+- [显示 Skill 名称](show-skill-name.md) — 调用 skill 时明确显示名称
+- [遵循策划案](follow-design-doc.md) — 始终遵循策划案编写代码，不偏离设计数值和规则
+- [记录错误](record-errors.md) — 用户报错时修复后自动记录原因和修复方法
+- [Godot 错误记录](godot-errors.md) — Godot 4 常见编译/运行时错误原因和修复
